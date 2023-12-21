@@ -13,6 +13,14 @@
   color: white;
   background-color: black;
   padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.App-header > h1 {
+  margin: 1rem 0;
+  font-size: 40px;
 }
 
 .App-link {
@@ -32,9 +40,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: black 4px solid;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   margin: 2rem;
+  box-shadow: darkgrey 5px 5px 1rem;
+  max-width: 30rem;
+  padding: 0 1rem;
 }
 
 .RandomPromptSuggestorButtonsContainer > button {
@@ -65,4 +75,56 @@ button:hover {
 
 button:active {
   background-color: #07baba;
+}
+
+body {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.AboutUsCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin: 0rem 2rem 1rem 2rem;
+  box-shadow: darkgrey 5px 5px 1rem;
+  overflow: hidden;
+}
+
+.AboutUsCard > img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.AboutUsInfoDiv {
+  width: 50%;
+  padding: 1rem;
+}
+
+.PageCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Active-tab {
+  background-color: darkcyan;
+}
+
+.PerformerImage {
+  width: 250px;
+}
+
+.Performer > * {
+  max-width: 250px;
+}
+
+.PerformersCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
