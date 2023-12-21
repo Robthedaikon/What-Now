@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-color: black;
+  padding: 0 2rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.RandomPromptSuggestorButtons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.RandomPromptSuggestor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: black 4px solid;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.RandomPromptSuggestorButtonsContainer > button {
+  margin: 0.25rem 0.25rem;
+}
+
+.RandomPromptSuggestor > h1 {
+  font-size: 3rem;
+  color: darkcyan;
+  margin: 1rem 1rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: black;
+  color: white;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  background-color: darkcyan;
+}
+
+button:active {
+  background-color: #07baba;
+}
