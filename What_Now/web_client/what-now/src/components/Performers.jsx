@@ -1,3 +1,6 @@
+import aliceImage from "../images/AliceMadnessReturns.jpg";
+import annaImage from "../images/AnnaKendrick.png";
+import paulImage from "../images/PaulMcCartney.png";
 import robImage from "../images/PancakeManRob.jpg";
 
 const performers = [
@@ -5,19 +8,19 @@ const performers = [
     name: "Alice",
     description:
       "Alice blablabla bla blablah blahhblaa bla blaabla blabla bla blaa blaabla blabla",
-    image: robImage,
+    image: aliceImage,
   },
   {
     name: "Anna",
     description:
       "Anna blaabla blabla bla blablaa blablablaaa bla blablablaa bla blablaa blabla bla blablah blahhblaa",
-    image: robImage,
+    image: annaImage,
   },
   {
     name: "Paul",
     description:
-      "Rob blablabablabl bla blablah blahhblaa bla blaabla blabla bla blablaa blablablaaa blaabla blabla bla.",
-    image: robImage,
+      "Paul blablabablabl bla blablah blahhblaa bla blaabla blabla bla blablaa blablablaaa blaabla blabla bla.",
+    image: paulImage,
   },
   {
     name: "Rob",
@@ -31,6 +34,7 @@ const Performer = (performer) => {
   return (
     <div className={"Performer"}>
       <div>
+        <h3>{performer.name}</h3>
         <img
           src={performer.image}
           alt={"Rob dressed as Pancake Man"}
@@ -38,7 +42,6 @@ const Performer = (performer) => {
         />
       </div>
       <div>
-        <h3>{performer.name}</h3>
         <p>{performer.description}</p>
       </div>
     </div>

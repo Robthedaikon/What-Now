@@ -2,10 +2,12 @@ import "./App.css";
 import { useState } from "react";
 import { PromptsPage } from "./components/PromptsPage";
 import { HomePage } from "./components/HomePage";
+import {ContactPage} from "./components/ContactPage";
 
 const Tabs = {
   HOME: "Home",
-  PROMPTS: "Prompts",
+  CONTACT: "Contact us",
+  PROMPTS: "Improv Prompts",
 };
 
 function App() {
@@ -16,36 +18,30 @@ function App() {
         return <HomePage />;
       case Tabs.PROMPTS:
         return <PromptsPage />;
+      case Tabs.CONTACT:
+        return <ContactPage />;
       default:
         return <HomePage />;
     }
   };
+  const orderedTabs = [Tabs.HOME, Tabs.PROMPTS, Tabs.CONTACT];
   return (
     <div className="App">
       <header className="App-header">
-        <div className="App-header-tabs">
-          <button
-            className={
-              activeTab === Tabs.HOME
-                ? "App-header-tab Active-tab"
-                : "App-header-tab"
-            }
-            onClick={() => setActiveTab(Tabs.HOME)}
-          >
-            Home
-          </button>
-          <button
-            className={
-              activeTab === Tabs.PROMPTS
-                ? "App-header-tab Active-tab"
-                : "App-header-tab"
-            }
-            onClick={() => setActiveTab(Tabs.PROMPTS)}
-          >
-            Improv Prompts
-          </button>
-        </div>
         <h1 className="Page-title">What Now?!</h1>
+        <div className="App-header-tabs">
+          {orderedTabs.map((tab) => {
+            return (
+              <button
+                className={
+                  activeTab === tab
+                    ? "App-header-tab Active-tab"
+                    : "App-header-tab"
+                }
+                onClick={() => setActiveTab(tab)}
+              >{tab}</button>
+            )})}
+        </div>
       </header>
       <body>{renderActiveTab()}</body>
     </div>
