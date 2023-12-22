@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { fetchRandomPrompt, PromptType } from "../fetchRandomPrompt";
+import { fetchRandomPrompt } from "../fetchRandomPrompt";
+import { PromptType } from "../constants";
 
 export const RandomPromptSuggestor = () => {
   const [prompt, setPrompt] = useState("");

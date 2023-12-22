@@ -19,7 +19,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from What_Now.apps.prompts.views import RandomLocationPromptEndpoint, RandomCharacterPromptEndpoint, RandomEmotionPromptEndpoint, RandomRelationshipPromptEndpoint, RandomLinePromptEndpoint
+from What_Now.apps.prompts.views import RandomLocationPromptEndpoint, RandomCharacterPromptEndpoint, \
+    RandomEmotionPromptEndpoint, RandomRelationshipPromptEndpoint, RandomLinePromptEndpoint, CreateNewPromptEndpoint, \
+    MatchingPromptsEndpoint
+
+
+class MatchingPromptEndpoint:
+    pass
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +35,6 @@ urlpatterns = [
     path('prompt/emotion/random/', RandomEmotionPromptEndpoint.as_view(), name="random-emotion-prompt"),
     path('prompt/relationship/random/', RandomRelationshipPromptEndpoint.as_view(), name="random-relationship-prompt"),
     path('prompt/line/random/', RandomLinePromptEndpoint.as_view(), name="random-line-prompt"),
+    path('prompts/', MatchingPromptsEndpoint.as_view(), name="matching-prompts"),
+    path('prompt/create/', CreateNewPromptEndpoint.as_view(), name="create-new-prompt"),
 ]

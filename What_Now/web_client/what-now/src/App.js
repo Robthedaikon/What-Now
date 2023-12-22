@@ -2,7 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import { PromptsPage } from "./components/PromptsPage";
 import { HomePage } from "./components/HomePage";
-import {ContactPage} from "./components/ContactPage";
+import { ContactPage } from "./components/ContactPage";
 
 const Tabs = {
   HOME: "Home",
@@ -39,8 +39,11 @@ function App() {
                     : "App-header-tab"
                 }
                 onClick={() => setActiveTab(tab)}
-              >{tab}</button>
-            )})}
+              >
+                {tab}
+              </button>
+            );
+          })}
         </div>
       </header>
       <body>{renderActiveTab()}</body>

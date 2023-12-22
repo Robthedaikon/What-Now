@@ -1,3 +1,44 @@
+.AddSuggestionModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: darkgrey 3px 3px 2rem;
+  max-width: 60rem;
+  padding: 0 1rem 1rem 1rem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Segoe UI", system-ui, serif;
+}
+
+.AddSuggestionModalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.AddSuggestionModal-AddButtonDisabled {
+  background-color: grey;
+  cursor: default;
+}
+
+.AddSuggestionModal-AddButtonDisabled:hover {
+  background-color: grey;
+}
+
+.AddSuggestionModal-CloseModalButton {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: darkcyan;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.1rem 0.3rem;
+}
+
 .App {
   text-align: center;
   background-color: white;
@@ -27,6 +68,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.ExistingSuggestionsContainer {
+  height: 8em;
 }
 
 .RandomPromptSuggestorButtons {
@@ -126,6 +171,17 @@ body {
   margin: 1rem 0;
 }
 
+.OpenAddSuggestionModalButton {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  background-color: darkcyan;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+}
+
 .PageCards {
   display: flex;
   flex-direction: row;
@@ -149,11 +205,16 @@ body {
 }
 
 .PerformersContainer {
-  margin: 40px 2rem 0 2rem
+  margin: 40px 2rem 0 2rem;
 }
 
 .Performer {
   margin: 0 2px;
+}
+
+.PromptsPage {
+  height: 90vh;
+  width: 100%;
 }
 
 .ContactPage {
@@ -172,4 +233,8 @@ body {
 .ContactPage > h2 {
   color: darkcyan;
   margin-top: 70px;
+}
+
+li {
+  list-style-type: none;
 }
